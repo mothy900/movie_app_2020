@@ -22,6 +22,7 @@ class App extends React.Component {
   componentDidMount() {
     this.getmovie();
   }
+
   render() {
     const { isLoading, movies } = this.state;
     return (
@@ -31,7 +32,7 @@ class App extends React.Component {
             <span className="loader__text">Loading...</span>
           </div>
         ) : (
-          <div calssName="movies">
+          <div className="movies">
             {movies.map((movie) => (
               <Movie
                 key={movie.id}
